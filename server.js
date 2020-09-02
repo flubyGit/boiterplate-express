@@ -13,14 +13,15 @@ mongoose.connect(process.env.CONNECTION_MONGODB, {useNewUrlParser: true, useUnif
     app.emit('connect')
 }).catch(e => console.log(e));
 
+app.use(helmet()) // Segurança
 
 app.use(express.urlencoded({extended: true})) // Ver req.body
+app.use(express.json())
 app.use(express.static(resolve(__dirname, 'public'))) // Caminho de arquivos estaticos
 app.use(routes) // Usar rotas
 
 app.use(globalMiddleware); // Usar meu middleware
 
-app.use(helmet()) // Segurança
 
 app.set('views', resolve('src','views')) // Aonde está a pasta de views
 app.set('view engine', 'ejs') // Usar template ejs
