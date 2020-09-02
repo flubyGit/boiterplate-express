@@ -1,0 +1,33 @@
+{
+  "name": "boiterplate-express",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/flubyGit/boiterplate-express.git",
+  "author": "Felipe <profissionalf.andre@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "css-loader": "^3.2.0",
+    "csurf": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "mongoose": "^5.10.2",
+    "regenerator-runtime": "^0.13.3",
+    "style-loader": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon --ignore public --ignore frontend",
+    "webpack": "sudo npx webpack -w"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
